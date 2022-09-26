@@ -1,0 +1,138 @@
+:root {
+    --gray: rgb(35, 35, 35);
+    --bg-gray: rgb(68, 68, 68);
+    --whitish: rgb(230, 230, 230);
+}
+
+body {
+    padding: 0;
+    background: var(--bg-gray);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    color: var(--whitish);
+    align-items: center;   
+}
+
+h1,
+.score {
+    color:yellow;
+
+}
+
+#scores {
+    border-top: 1px solid var(--whitish);
+    text-align: center;
+    padding: 30px;
+}
+
+#scores > p:first-child {
+    margin-bottom: 10px;
+}
+
+.score-section > p {
+    margin: 30px;
+}
+
+
+
+h1 {
+    margin: 50px 0;
+    font-size: 3em;
+}
+
+p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.score-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--gray);
+    border-radius: 1.1em;
+    width: 1000px;
+}
+
+.play-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 50px;
+}
+
+.player-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--gray);
+    padding: 30px;
+    border-radius: 1.1em;
+    gap: 20px;
+}
+
+.input-section {
+    display: flex;
+    gap: 24px;
+}
+
+.input-section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    height: auto;
+    width: 140px;
+    border-radius: 50%;
+}
+
+#computer-choice {
+    height: 130px;
+    width: 130px;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#computer-choice > div {
+    font-size: 4em;
+    font-family:sans-serif, Courier, monospace;
+    font-weight: bold;
+    background: rgb(126, 126, 126);
+    border-radius: 50%;
+    height: 119px;
+    width: 119px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.computer-section {
+    background: rgb(35, 35, 35);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 1.1em;
+    align-items: center;
+    padding: 30px;
+}
+
+@keyframes reveal-anim {
+    25% {transform: scale(1.15) rotateY(180deg);}
+    100% {transform: scale(1)}
+}
+
+.reveal {
+    animation-name: reveal-anim;
+    animation-duration: 1.0s;
+}
