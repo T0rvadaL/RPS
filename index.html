@@ -11,10 +11,10 @@
 <body>
     <h1>ROCK PAPER SCISSORS</h1>
     <div class="score-section">
-        <p>First to: 3</p>
+        <p>First to: 5</p>
         <div id="scores">
-            <p>Player score: <span class="score">0</span></p>
-            <p>Computer score: <span class="score">0</span></p>
+            <p>Player score: <span class="player-score">0</span></p>
+            <p>Computer score: <span class="computer-score">0</span></p>
         </div>
     </div>
 
@@ -23,26 +23,31 @@
                 <p>Choose</p>
             <div class="input-section">
                 <div>
-                    <input data-hover=false class="btn" id="rock" type="image" src="images/RPS-rock.png" alt="rock">
+                    <input draggable="false" class="btn" id="rock" type="image" src="images/RPS-rock.png" alt="rock">
                     <label for="rock">Rock</label>
                 </div>
                 <div>
-                    <input data-hover=false class="btn" id="paper" type="image" src="images/RPS-paper.png" alt="paper">
+                    <input draggable="false" class="btn" id="paper" type="image" src="images/RPS-paper.png" alt="paper">
                     <label for="paper">Paper</label>
                 </div>
                 <div>
-                    <input data-hover=false class="btn" id="scissors" type="image" src="images/RPS-scissors.png" alt="scissors">
+                    <input draggable="false" class="btn" id="scissors" type="image" src="images/RPS-scissors.png" alt="scissors">
                     <label for="scissors">Scissors</label>
                 </div>
             </div>
         </div>
         <div class="computer-section">
             <p>Computer</p>
-            <div id="computer-choice">
+            <div class="computer-choice">
                 <div>?</div>
             </div>
-            <img id="computer-img">
+            <img draggable="false" class="btn" id="computer-img">
         </div>
     </div>
+
+    <dialog>
+        <h2>YOU LOSE!</h2>
+        <button>Play again?</button>
+    </dialog>
 </body>
 </html>

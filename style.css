@@ -14,6 +14,42 @@ body {
     align-items: center;   
 }
 
+dialog {
+    background: var(--gray);
+    border: none;
+    border-radius: 1.1em;
+    padding: 50px 0;
+    width: 450px;
+    text-align: center;
+    
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--whitish);
+    margin: 0;
+}
+
+button {
+    margin-top: 24px;
+    color: var(--gray);
+    height: 50px;
+    width: 120px;
+    background: var(--whitish);
+    font-size: 1.05em;
+    font-weight: bold;
+    border: none;
+    border-radius: none;
+}
+
+button:hover {
+    filter: contrast(1.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
 h1,
 .score {
     color:yellow;
@@ -63,6 +99,7 @@ p {
     font-size: 24px;
     font-weight: bold;
     gap: 50px;
+    height: 334px;
 }
 
 .player-section {
@@ -72,7 +109,7 @@ p {
     background: var(--gray);
     padding: 30px;
     border-radius: 1.1em;
-    gap: 20px;
+    gap: 40px;
 }
 
 .input-section {
@@ -93,7 +130,7 @@ p {
     border-radius: 50%;
 }
 
-#computer-choice {
+.computer-choice {
     height: 130px;
     width: 130px;
     border: 5px solid white;
@@ -101,9 +138,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: default;
 }
 
-#computer-choice > div {
+.computer-choice > div {
     font-size: 4em;
     font-family:sans-serif, Courier, monospace;
     font-weight: bold;
@@ -117,22 +155,26 @@ p {
 }
 
 .computer-section {
-    background: rgb(35, 35, 35);
+    background: var(--gray);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     padding: 20px;
     border-radius: 1.1em;
     align-items: center;
     padding: 30px;
 }
 
-@keyframes reveal-anim {
-    25% {transform: scale(1.15) rotateY(180deg);}
-    100% {transform: scale(1)}
+.hidden {
+    display: none;
 }
 
-.reveal {
-    animation-name: reveal-anim;
-    animation-duration: 1.0s;
+.player-section .btn:hover {
+    transform: scale(1.15);
+    filter: contrast(2);
+}
+
+.player-section .btn:active {
+    transform: scale(1.05);
+    filter: contrast(2);
 }
